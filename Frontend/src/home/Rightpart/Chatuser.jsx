@@ -3,6 +3,8 @@ import useConversation from "../../zustand/useConversation.js";
 import { useSocketContext } from "../../context/SocketContext.jsx";
 import { CiMenuFries } from "react-icons/ci";
 
+import profile from "../../../public/user.jpg"; // getting photo from public folder.
+
 function Chatuser() {
   const { selectedConversation } = useConversation();
   const { onlineUsers } = useSocketContext();
@@ -22,7 +24,7 @@ function Chatuser() {
       <div className="flex space-x-3 items-center justify-center h-[8vh] bg-gray-800 hover:bg-gray-700 duration-300">
         <div className="avatar online">
           <div className="w-16 rounded-full">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <img src={profile} />
           </div>
         </div>
         <div>
